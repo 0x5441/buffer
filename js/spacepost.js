@@ -5,12 +5,16 @@ if (!editor) {
 } else {
   editor.focus();
 
+  // توليد رقم عشوائي من 5 خانات
+  const randomNumber = Math.floor(Math.random() * 100000)
+    .toString()
+    .padStart(5, "0");
+
   const text =
 `#مساحه
 #سبيس
 
-
-1`;
+${randomNumber}`;
 
   const pasteEvent = new ClipboardEvent("paste", {
     bubbles: true,
